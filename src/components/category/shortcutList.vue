@@ -1,13 +1,12 @@
 <template>
-  <article>
-    <h1>Vos raccourcis</h1>
+  <article class="category-article">
     <a
       href="#"
       class="shortcut-article"
       :aria-selected="icon === 'fas fa-user'"
     >
-      <span class="fas" :class="icon" />
-      <span v-text="name" />
+      <span class="fas categoryIcon" :class="icon" />
+      <span v-text="name" class="categoryText" />
     </a>
   </article>
 </template>
