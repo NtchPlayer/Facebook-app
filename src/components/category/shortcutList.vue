@@ -2,7 +2,7 @@
   <article class="category-article">
     <a
       href="#"
-      class="shortcut-article"
+      class="shortcut-article categoryArticleItem"
       :aria-selected="icon === 'fas fa-user'"
     >
       <span class="fas categoryIcon" :class="icon" />
@@ -20,4 +20,3 @@ export default {
   },
 };
 </script>
-<style></style>
