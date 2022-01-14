@@ -23,17 +23,28 @@
         :icon="button"
       />
     </nav>
-    <div></div>
+    <ul id="container-button-action">
+      <ButtonUser :name="false" />
+      <ButtonAction
+          v-for="(button, i) in buttonAction"
+          :key="i"
+          :icon="button.icon"
+      />
+    </ul>
   </header>
 </template>
 
 <script>
 import ButtonSection from './button/ButtonSection.vue'
+import ButtonUser from './button/ButtonUser.vue'
+import ButtonAction from "./button/ButtonAction";
 
 export default {
   name: 'Header',
   components: {
-    ButtonSection
+    ButtonAction,
+    ButtonSection,
+    ButtonUser
   },
   data () {
     return {
@@ -43,6 +54,17 @@ export default {
         'fa-store',
         'fa-users',
         'fa-gamepad'
+      ],
+      buttonAction: [
+        {
+          icon: 'fa-th'
+        }, {
+          icon: 'fa-comment'
+        }, {
+          icon: 'fa-bell'
+        }, {
+          icon: 'fa-caret-down'
+        }
       ]
     }
   }
@@ -55,6 +77,7 @@ header{
   grid-template-columns: 25% 50% 25%;
   background-color: #242526;
   border-bottom: 1px solid #363738;
+  padding: 0 20px;
 }
 
 header h1 svg path:last-child{
@@ -97,5 +120,11 @@ header form input::placeholder{
 
 #container-button-section{
   display: flex;
+}
+
+#container-button-action{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 </style>
