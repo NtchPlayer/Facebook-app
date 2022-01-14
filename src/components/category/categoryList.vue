@@ -1,12 +1,8 @@
 <template>
-  <article>
-    <a
-      href="#"
-      class="category-article"
-      :aria-selected="icon === 'fas fa-user'"
-    >
-      <span class="fas" :class="icon" />
-      <span v-text="name" />
+  <article class="category-article">
+    <a href="#" :aria-selected="icon === 'fas fa-user'">
+      <span class="fas categoryIcon" :class="icon" />
+      <span v-text="name" class="categoryText" />
     </a>
   </article>
 </template>
@@ -20,4 +16,16 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.category-article {
+  margin: 25px 25px;
+}
+.categoryIcon {
+  font-size: 30px;
+  margin-right: 15px;
+  color: var(--primary-color);
+}
+.categoryText {
+  font-size: 1rem;
+}
+</style>
