@@ -16,22 +16,45 @@
         <input id="search" type="search" placeholder="Rechercher sur Facebook">
       </form>
     </div>
-    <nav>
-
+    <nav id="container-button-section">
+      <ButtonSection
+        v-for="(button, i) in buttonNav"
+        :key="i"
+        :icon="button"
+      />
     </nav>
+    <div></div>
   </header>
 </template>
 
 <script>
+import ButtonSection from './button/ButtonSection.vue'
+
 export default {
-  name: "Header"
+  name: 'Header',
+  components: {
+    ButtonSection
+  },
+  data () {
+    return {
+      buttonNav: [
+        'fa-home',
+        'fa-video',
+        'fa-store',
+        'fa-users',
+        'fa-gamepad'
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
 header{
-  display: flex;
-  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 348px 744px 348px;
+  grid-gap: 0 50px;
+  padding: 5px 20px;
   background-color: #242526;
   border-bottom: 1px solid #363738;
 }
@@ -42,6 +65,7 @@ header h1 svg path:last-child{
 
 header div{
   display: flex;
+  margin: 5px 0;
 }
 
 header form{
@@ -71,5 +95,9 @@ header label{
 
 header form input::placeholder{
   color: #fff;
+}
+
+#container-button-section{
+  display: flex;
 }
 </style>
