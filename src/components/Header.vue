@@ -16,7 +16,7 @@
         <input id="search" type="search" placeholder="Rechercher sur Facebook">
       </form>
     </div>
-    <nav id="container-button-section">
+    <nav id="container-button-section" class="section-central">
       <ButtonSection
         v-for="(button, i) in buttonNav"
         :key="i"
@@ -52,9 +52,7 @@ export default {
 <style scoped>
 header{
   display: grid;
-  grid-template-columns: 348px 744px 348px;
-  grid-gap: 0 50px;
-  padding: 5px 20px;
+  grid-template-columns: 25% 50% 25%;
   background-color: #242526;
   border-bottom: 1px solid #363738;
 }
@@ -65,7 +63,7 @@ header h1 svg path:last-child{
 
 header div{
   display: flex;
-  margin: 5px 0;
+  padding: 10px 0;
 }
 
 header form{
