@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="category">
+    <nav class="category">
       <Category
         v-for="(category, i) in CategoriesList"
         :key="i"
@@ -13,9 +13,9 @@
         :icon="shortcut.icon"
         :name="shortcut.name"
       />
-    </section>
+    </nav>
     <section class="mainContent section-central"></section>
-    <section class="chatList"></section>
+    <aside class="chatList"></aside>
   </main>
 </template>
 
