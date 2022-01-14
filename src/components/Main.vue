@@ -25,22 +25,25 @@
     </aside>
     <section class="mainContent section-central">
       <Story />
+      <WhatsUp />
     </section>
     <aside class="chatList"></aside>
   </main>
 </template>
 
 <script>
-import Category from "./category/categoryList.vue"
-import Shortcut from "./category/shortcutList.vue"
-import Story from './Story'
+import Category from "./category/categoryList.vue";
+import Shortcut from "./category/shortcutList.vue";
+import Story from "./Story";
+import WhatsUp from "./mainContent/whatsUp.vue";
 
 export default {
   name: "Main",
   components: {
     Category,
     Shortcut,
-    Story
+    Story,
+    WhatsUp,
   },
   data() {
     return {
@@ -56,7 +59,7 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        }
+        },
       ],
       ShortcutList: [
         { icon: "fa-user-friends", name: "Amis" },
@@ -70,11 +73,11 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        }
-      ]
-    }
-  }
-}
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -82,11 +85,11 @@ main {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   color: white;
-  margin-top: 20px;
 }
 .scrollOverflow {
+  overflow-x: hidden;
   overflow-y: scroll;
-  max-height: calc(100vh - 85px);
+  max-height: calc(100vh - 63px);
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
@@ -108,7 +111,7 @@ main {
   margin: 0 25px;
   font-size: 1.1rem;
   font-weight: 600;
-  border-top: 1px solid var(--background-component);
+  border-top: 0.3px solid var(--grey-color);
   padding-top: 15px;
 }
 </style>
