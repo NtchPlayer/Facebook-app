@@ -14,20 +14,24 @@
         :name="shortcut.name"
       />
     </nav>
-    <section class="mainContent section-central"></section>
+    <section class="mainContent section-central">
+      <Story />
+    </section>
     <aside class="chatList"></aside>
   </main>
 </template>
 
 <script>
-import Category from "./category/categoryList.vue";
-import Shortcut from "./category/shortcutList.vue";
+import Category from './category/categoryList.vue'
+import Shortcut from './category/shortcutList.vue'
+import Story from './Story.vue'
 
 export default {
-  name: "Main",
+  name: 'Main',
   components: {
     Category,
     Shortcut,
+    Story
   },
   data() {
     return {
@@ -43,7 +47,7 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        },
+        }
       ],
       ShortcutList: [
         { icon: "fa-user-friends", name: "Amis" },
@@ -57,11 +61,11 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        },
-      ],
-    };
-  },
-};
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
