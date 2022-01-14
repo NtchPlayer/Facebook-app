@@ -1,16 +1,73 @@
 <template>
   <main>
-    <section class="category"></section>
-    <section class="mainContent"></section>
-    <section class="chatList"></section>
+    <section class="category section-central">
+      <Category
+        v-for="(category, i) in CategoriesList"
+        :key="i"
+        :icon="category.icon"
+        :name="category.name"
+      />
+      <Shortcut
+        v-for="(shortcut, i) in ShortcutList"
+        :key="i"
+        :icon="shortcut.icon"
+        :name="shortcut.name"
+      />
+    </section>
+    <section class="mainContent section-central"></section>
+    <section class="chatList section-central"></section>
   </main>
 </template>
 
 <script>
+import Category from "./category/categoryList.vue";
+import Shortcut from "./category/shortcutList.vue";
+
 export default {
   name: "Main",
-  components: {},
+  components: {
+    Category,
+    Shortcut,
+  },
+  data() {
+    return {
+      CategoriesList: [
+        { icon: "fa-user-friends", name: "Amis" },
+        { icon: "fa-users", name: "groupes" },
+        { icon: "fa-store", name: "Marketplace" },
+        { icon: "fa-video", name: "Watch" },
+        { icon: "fa-history", name: "Souvenirs" },
+        { icon: "fa-image", name: "Activité publicitaire récente" },
+        { icon: "fa-seedling", name: "centre de climatologie" },
+        { icon: "fa-heart", name: "Collecte de Fonds" },
+        {
+          icon: "fa-hand-holding-heart",
+          name: "Covid-19 -  Centre d'information",
+        },
+      ],
+      ShortcutList: [
+        { icon: "fa-user-friends", name: "Amis" },
+        { icon: "fa-users", name: "groupes" },
+        { icon: "fa-store", name: "Marketplace" },
+        { icon: "fa-video", name: "Watch" },
+        { icon: "fa-history", name: "Souvenirs" },
+        { icon: "fa-image", name: "Activité publicitaire récente" },
+        { icon: "fa-seedling", name: "centre de climatologie" },
+        { icon: "fa-heart", name: "Collecte de Fonds" },
+        {
+          icon: "fa-hand-holding-heart",
+          name: "Covid-19 -  Centre d'information",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style></style>
+<style>
+main {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  color: white;
+}
+</style>

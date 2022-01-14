@@ -1,20 +1,23 @@
 <template>
-  <a href="#" class="button-section" :aria-selected="icon === 'fa-home'">
+  <a
+    href="#"
+    class="button-section"
+    :aria-selected="icon === 'fa-user-friends'"
+  >
     <span class="fas" :class="icon" />
   </a>
 </template>
 
 <script>
 export default {
-  name: 'ButtonSection',
+  name: "ButtonSection",
   props: {
-    icon: { type: String, required: true }
-  }
-}
+    icon: { type: String, required: true },
+  },
+};
 </script>
-
 <style>
-.button-section{
+.button-section {
   width: 100%;
   height: 100%;
   display: flex;
@@ -26,11 +29,11 @@ export default {
   transition-duration: var(--transition-duration);
 }
 
-.button-section:hover{
+.button-section:hover {
   color: var(--text-color);
 }
 
-.button-section[aria-selected]{
+.button-section[aria-selected] {
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
