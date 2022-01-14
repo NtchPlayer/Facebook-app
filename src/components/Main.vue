@@ -25,6 +25,7 @@
     </aside>
     <section class="mainContent section-central">
       <Story />
+      <WhatsUp />
     </section>
     <aside class="chatList"></aside>
   </main>
@@ -33,14 +34,16 @@
 <script>
 import Category from "./category/categoryList.vue"
 import Shortcut from "./category/shortcutList.vue"
-import Story from './Story'
+import Story from './Story.vue'
+import WhatsUp from './mainContent/whatsUp.vue'
 
 export default {
   name: "Main",
   components: {
     Category,
     Shortcut,
-    Story
+    Story,
+    WhatsUp
   },
   data() {
     return {
