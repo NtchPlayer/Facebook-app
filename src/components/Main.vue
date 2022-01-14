@@ -82,11 +82,11 @@ main {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   color: white;
+  margin-top: 20px;
 }
 .scrollOverflow {
-  overflow-x: hidden;
   overflow-y: scroll;
-  max-height: calc(100vh - 63px);
+  max-height: calc(100vh - 85px);
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
 }
@@ -108,7 +108,7 @@ main {
   margin: 0 25px;
   font-size: 1.1rem;
   font-weight: 600;
-  border-top: .3px solid var(--grey-color);
+  border-top: 1px solid var(--background-component);
   padding-top: 15px;
 }
 </style>

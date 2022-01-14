@@ -75,7 +75,7 @@ export default {
 header{
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  background-color: #242526;
+  background-color: var(--background-color-2);
   border-bottom: 1px solid #363738;
   padding: 0 20px;
 }
