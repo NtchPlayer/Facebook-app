@@ -35,6 +35,6 @@ export default {
   padding: 11px 25px;
 }
 .categoryArticleItem:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-component);
 }
 </style>

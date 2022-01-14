@@ -2,10 +2,10 @@
   <li>
     <button class="button-user">
       <figure>
-        <img alt="User Photo" src="@/assets/user-default.webp">
+        <img alt="User Photo" src="@/assets/user-default.webp" />
       </figure>
       <p>
-        <span class="button-user-firstname">Prénom</span>
+        <span class="button-user-firstname" v-show="firstname">Prénom</span>
         <span class="button-user-name" v-show="name">Nom</span>
       </p>
     </button>
@@ -14,20 +14,21 @@
 
 <script>
 export default {
-  name: 'ButtonUser',
-  props:{
-    name: { type: Boolean, default: true }
-  }
-}
+  name: "ButtonUser",
+  props: {
+    name: { type: Boolean, default: true },
+    firstname: { type: Boolean, defaut: true },
+  },
+};
 </script>
 
 <style>
-.button-user{
+.button-user {
   display: flex;
   align-items: center;
 }
 
-.button-user figure{
+.button-user figure {
   width: 30px;
   height: 30px;
   overflow: hidden;
@@ -38,15 +39,15 @@ export default {
   margin-right: 10px;
 }
 
-.button-user figure img{
+.button-user figure img {
   height: 100%;
 }
 
-.button-user p{
+.button-user p {
   font-weight: 500;
 }
 
-.button-user-firstname{
+.button-user-firstname {
   margin-right: 5px;
 }
 </style>

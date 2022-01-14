@@ -25,22 +25,25 @@
     </aside>
     <section class="mainContent section-central">
       <Story />
+      <WhatsUp />
     </section>
     <aside class="chatList"></aside>
   </main>
 </template>
 
 <script>
-import Category from "./category/categoryList.vue"
-import Shortcut from "./category/shortcutList.vue"
-import Story from './Story'
+import Category from "./category/categoryList.vue";
+import Shortcut from "./category/shortcutList.vue";
+import Story from "./Story";
+import WhatsUp from "./mainContent/whatsUp.vue";
 
 export default {
   name: "Main",
   components: {
     Category,
     Shortcut,
-    Story
+    Story,
+    WhatsUp,
   },
   data() {
     return {
@@ -56,7 +59,7 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        }
+        },
       ],
       ShortcutList: [
         { icon: "fa-user-friends", name: "Amis" },
@@ -70,11 +73,11 @@ export default {
         {
           icon: "fa-hand-holding-heart",
           name: "Covid-19 -  Centre d'information",
-        }
-      ]
-    }
-  }
-}
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -108,7 +111,7 @@ main {
   margin: 0 25px;
   font-size: 1.1rem;
   font-weight: 600;
-  border-top: .3px solid var(--grey-color);
+  border-top: 0.3px solid var(--grey-color);
   padding-top: 15px;
 }
 </style>
